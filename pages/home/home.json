@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "有方旅行",
+  "usingComponents": {
+    "wux-icon": "../../dist/icon/index",
+    "wux-grids": "../../dist/grids/index",
+    "wux-grid": "../../dist/grid/index",
+    "wux-card": "../../dist/card/index",
+    "wux-wing-blank": "../../dist/wing-blank/index"
+  }
+}

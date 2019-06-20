@@ -1,0 +1,16 @@
+<!--pages/keydetail/keydetail.wxml-->
+<view class='main'>
+<view class="sub-title">一月</view>
+        <wux-wing-blank size="default">
+        <navigator url='../detail/detail'>
+            <wux-card title="八月印象派艺术之旅" extra="额外内容">
+                <view slot="body">
+                <image src='../../images/card1.jpg'></image>
+                </view>
+                <view slot="footer">
+                <text>[上海之行] 上海旅行，上海学习</text>
+                </view>
+            </wux-card>
+        </navigator>
+  </wux-wing-blank>
+  </view>

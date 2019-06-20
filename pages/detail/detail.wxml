@@ -1,0 +1,247 @@
+<!--pages/detail/detail.wxml-->
+<view>七天法国艺术游学之旅</view>
+<view class='main'>
+ <view class="page-section page-section-spacing swiper">
+      <!-- 轮播图 -->
+      <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{bnrUrl}}" wx:for-item="item">
+          <swiper-item>
+          <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+
+  <view class="cu-timeline solid{{size?'s':''}}">
+  <!-- <view class="cu-time">第一天</view> -->
+  <view class="padding bg-white">
+  <view class="cu-tag round bg-red">
+  第一天 中国-巴黎
+  </view>
+  </view>
+  
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">中国</view>
+          <view class="cu-tag line-cyan">巴黎</view>
+        </view>
+        <view class="margin-top">乘坐国际航班前往巴黎</view>
+    </view>
+  </view>
+  
+
+  <view class="padding bg-white solid{{size?'s':''}}">
+  <view class="cu-tag round bg-orange">
+  第二天 巴黎初印象
+  </view>
+  </view>
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">早餐</view>
+          <view class="cu-tag line-cyan">晚餐</view>
+        </view>
+        <view class="margin-top">
+        <text>早餐：酒店自助
+              午餐：Le Procope（伏尔泰、卢梭、狄更斯、拿破仑光顾的餐厅），人均30欧元
+              晚餐：团餐
+        </text>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">上午</view>
+          <view class="cu-tag line-cyan">下午</view>
+        </view>
+        <view class="margin-top">
+        <text>
+        上午：参观埃菲尔铁塔，在塞纳河左岸徜徉，体会巴黎的独特人文气息
+        下午：访问人类文明瑰宝卢浮宫，亲身体会镇馆三宝的魅力：蒙娜丽莎的微笑、米罗的维纳斯雕塑以及胜利女神像雕塑。带队老师将从专业角度来介绍艺术，并带领孩子们从不同角度取景拍照，便于日后临摹。
+        </text>
+        </view>
+    </view>
+    </view>
+
+    
+    <view class="padding bg-white solid{{size?'s':''}}">
+  <view class="cu-tag round bg-olive">
+  第三天 蓬皮杜艺术中心－奥赛博物馆
+  </view>
+  </view>
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">早餐</view>
+          <view class="cu-tag line-cyan">晚餐</view>
+        </view>
+        <view class="margin-top">
+        <text>
+        早餐：酒店自助
+午餐：双叟咖啡厅（人均20欧元）
+晚餐：锅色天香（火锅聚餐）
+        </text>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">上午</view>
+          <view class="cu-tag line-cyan">下午</view>
+        </view>
+        <view class="margin-top">
+        <text>
+        上午：访问蓬皮杜艺术中心。蓬皮杜艺术中心为法国已故总统蓬皮杜所建立，其建筑本身就是一个现代艺术品：其外露的钢骨结构以及复杂的管线，形成了“高技派”风格。如果说卢浮宫代表着法兰西的古代文明，那么“国立蓬皮杜文化中心”便是现代巴黎的象征。
+下午：参观奥赛博物馆
+奥赛博物馆是由废弃多年不用的奥赛火车站改建而成。奥赛博物馆时世界上收藏印象派主要画作最多的地方。这里有梵高、高更、安格尔、莫奈等画家的作品。在这里，带队老师将讲解梵高和莫奈的作品，为接下来实地参观莫奈和梵高故居做准备。
+        </text>
+        </view>
+    </view>
+    </view>
+ 
+  
+   <view class="padding bg-white  solid{{size?'s':''}}">
+  <view class="cu-tag round bg-green">
+  第四天 巴比松小镇－枫丹白露
+  </view>
+  </view>
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">早餐</view>
+          <view class="cu-tag line-cyan">晚餐</view>
+        </view>
+        <view class="margin-top">
+        <text>
+       早餐：酒店自助
+午餐：自带食物野餐或在巴比松当地餐馆用餐
+晚餐：团餐
+        </text>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">上午</view>
+          <view class="cu-tag line-cyan">下午</view>
+        </view>
+        <view class="margin-top">
+        <text>
+        上午：早饭过后，我们将驾车前往巴比松小镇。巴比松小镇位于巴黎南郊50公里左右，是一个安静而充满田园诗风光的法国小镇。巴比松小镇闻名于世诗因为巴比松画派诞生于此，其中包括诗人风景画家柯罗、科学风景画家卢梭以及农民画家米勒。这些画家们聚居的GANNE客栈现在成为市政博物馆，孩子们可以在这里观赏不同风格流派的绘画。
+下午：午饭后，我们将前往枫丹白露森林，在这里，孩子们可以自由玩耍、徒步、写生，领略这一浪漫森林里的无限美景。
+        </text>
+        </view>
+    </view>
+    </view>
+
+
+<view class="padding bg-white  solid{{size?'s':''}}">
+  <view class="cu-tag round bg-blue">
+  第五天 莫奈花园及梵高故居
+  </view>
+  </view>
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">早餐</view>
+          <view class="cu-tag line-cyan">晚餐</view>
+        </view>
+        <view class="margin-top">
+        <text>
+     早餐：酒店自助
+午餐：自带食物野餐或在莫奈故居用餐
+晚餐：团餐
+        </text>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">上午</view>
+          <view class="cu-tag line-cyan">下午</view>
+        </view>
+        <view class="margin-top">
+        <text>
+        上午：吉维尼－莫奈花园
+早饭后，我们将乘车前往印象派开山鼻祖，莫奈精心打造的莫奈花园。在莫奈花园里，孩子们可以看到很多出现在莫奈作品中的著名风景，例如日本桥、睡莲。印象派大师莫奈在这片花园里生活了四十三年，每一个角落都是他亲手打造的。热爱花草的莫奈在这里建设出了一个充满不对称和弯曲美感的水上花园。
+下午：午餐后，我们将前往另一个法国小镇奥维尔，参观著名画家梵高故居。这里是梵高最后生活并去世的地方。梵高那幅著名的《麦田里的乌鸦》就是在这里绘制而成。这个充满人文气息的小镇还吸引了多比尼、塞尚、毕沙罗等艺术巨匠。其市政厅、火车站、教堂和小花园等都能够让人驻足。孩子们可以在这里进行风景写生。
+        </text>
+        </view>
+    </view>
+    </view>
+
+
+<view class="padding bg-white solid{{size?'s':''}}">
+  <view class="cu-tag round bg-pink">
+  第六天 香波堡
+  </view>
+  </view>
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">早餐</view>
+          <view class="cu-tag line-cyan">晚餐</view>
+        </view>
+        <view class="margin-top">
+        <text>
+     早餐：酒店自助
+午餐：自带或香波堡餐厅用餐
+晚餐：团餐
+        </text>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">上午</view>
+          <view class="cu-tag line-cyan">下午</view>
+        </view>
+        <view class="margin-top">
+        <text>
+        上午：在观赏了法国小镇风光以及田园风光之后，这一天我们将观赏雄伟的法国皇室城堡香波堡。香波堡市卢瓦尔河流域城堡群中最大的城堡，历史上是王室的狩猎行宫，如今是法国的国家公园。它是欧洲最大的封闭式园林，城堡加上周围狩猎用的森林，占地共54.5平方公里，相当于75个紫禁城。值得一提的是，达芬奇是该城堡的设计师之一。香波堡雄伟壮阔，充分展示了法兰西王国的风貌。孩子们在这里可以尽情欣赏城堡内部的装饰以及城堡外部花园。孩子们可以在这里写生城堡外观以及其内部著名的双螺旋楼梯。
+下午：回到市区，安排学生作品交流活动
+在巴黎市中心，孩子们展览此次游学之旅的作品。建议作品为印象派画作，以孩子们眼中的法国和法国生活为主题。展览将安排在巴黎市中心的画廊或美术馆中。
+        </text>
+        </view>
+    </view>
+    </view>
+
+
+<view class="padding bg-white  solid{{size?'s':''}}">
+  <view class="cu-tag round bg-mauve">
+  第七天 巴黎－中国
+  </view>
+  </view>
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">早餐</view>
+          <view class="cu-tag line-cyan">晚餐</view>
+        </view>
+        <view class="margin-top">
+        <text>
+     早餐：酒店自助
+        </text>
+        </view>
+    </view>
+
+    <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-cyan">上午</view>
+          <view class="cu-tag line-cyan">下午</view>
+        </view>
+        <view class="margin-top">
+        <text>
+完成了浪漫的法国艺术之旅，一路平安返回中国。
+        </text>
+        </view>
+    </view>
+    </view>
+
+    
+  </view>
+</view>

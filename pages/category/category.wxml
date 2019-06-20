@@ -1,0 +1,48 @@
+<!--pages/category/category.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <!-- <view class="page__title">Tabs</view>
+        <view class="page__desc">标签页</view> -->
+    </view>
+    <view class="page__bd">
+        <view class="sub-title">按月分类</view>
+        <wux-tabs defaultCurrent="tab1" direction="vertical">
+            <wux-tab key="tab1" title="一月">
+
+            </wux-tab>
+            <wux-tab key="tab2" title="二月">
+
+            </wux-tab>
+            <wux-tab key="tab3" title="三月">
+            
+            </wux-tab>
+            <wux-tab key="tab4" title="四月">
+            
+            </wux-tab>
+            <wux-tab key="tab5" title="五月">
+            
+            </wux-tab>
+            <wux-tab key="tab6" title="六月">
+            
+            </wux-tab>
+            <wux-tab key="tab7" title="七月">
+            
+            </wux-tab>
+            <wux-tab key="tab8" title="八月">
+            
+            </wux-tab>
+            <wux-tab key="tab9" title="九月">
+            
+            </wux-tab>
+            <wux-tab key="tab10" title="十月">
+            
+            </wux-tab>
+            <wux-tab key="tab11" title="十一月">
+            
+            </wux-tab>
+            <wux-tab key="tab12" title="十二月">
+            
+            </wux-tab>
+        </wux-tabs>
+    </view>
+</view>

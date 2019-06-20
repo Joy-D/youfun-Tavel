@@ -1,0 +1,71 @@
+<!--pages/home/home.wxml-->
+<view class='main'>
+  <view class="page-section page-section-spacing swiper">
+      <!-- 轮播图 -->
+      <swiper
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{bnrUrl}}" wx:for-item="item">
+          <swiper-item>
+          <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="search">
+      <navigator url="../search/search">
+          <view class="search-text">
+            <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+              搜 索
+            </view>
+        </navigator>
+    </view>
+    <view class="page__bd">
+        <!-- <view class="sub-title">Custom content</view> -->
+        <!-- 六个主选择框 -->
+        <wux-grids  bordered="{{ false }}">
+            <wux-grid>
+            <navigator url='../keydetail/keydetail'>
+                <wux-icon type="logo-github" />
+                <view>艺术游学</view>
+            </navigator>
+            </wux-grid>
+            <wux-grid>
+                <wux-icon type="logo-github" />
+                <view>酒店管理</view>
+            </wux-grid>
+            <wux-grid>
+                <wux-icon type="logo-github" />
+                <view>马术学校</view>
+            </wux-grid>
+            <wux-grid>
+                <wux-icon type="logo-github" />
+                <view>建筑流派</view>
+            </wux-grid>
+            <wux-grid>
+                <wux-icon type="logo-github" />
+                <view>欧洲画廊</view>
+            </wux-grid>
+            <wux-grid>
+                <wux-icon type="logo-github" />
+                <view>红酒鉴赏</view>
+            </wux-grid>
+        </wux-grids>
+    </view>
+    <view class='card'>
+     <view class="page__bd">
+        <wux-wing-blank size="default">
+        <navigator url='../detail/detail'>
+            <wux-card title="七天法国艺术游学之旅" extra="艺术游学">
+                <view slot="body">
+                <image src='../../images/card1.jpg'></image>
+                </view>
+                <view slot="footer">
+                <text>[￥15,000] 九月-八月</text>
+                </view>
+            </wux-card>
+        </navigator>
+        </wux-wing-blank>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/category/category",
+    "pages/myprofile/myprofile",
+    "pages/bus/bus",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/keydetail/keydetail",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff9933",
+    "navigationBarTitleText": "有方旅行",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "目录"
+      },
+      {
+        "pagePath": "pages/bus/bus",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/myprofile/myprofile",
+        "text": "用户中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
