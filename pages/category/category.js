@@ -1,51 +1,71 @@
-// pages/category/category.js
+const app = getApp()
 Page({
   data: {
-    current: 'tab1',
-    tabs: [
-      {
-        key: 'tab1',
-        title: 'Tab 1',
-        content: 'Content of tab 1',
-      },
-      {
-        key: 'tab2',
-        title: 'Tab 2',
-        content: 'Content of tab 2',
-      },
-      {
-        key: 'tab3',
-        title: 'Tab 3',
-        content: 'Content of tab 3',
-      },
-    ],
+    bnrUrl: ["/images/a1.jpg", "/images/a2.jpg", "/images/a3.jpg", "/images/a4.jpg"],
+    // StatusBar: app.globalData.StatusBar,
+    // CustomBar: app.globalData.CustomBar,
+    //Custom: app.globalData.Custom,
+    TabCur: 0,
+    MainCur: 0,
+    VerticalNavTop: 0,
+    list: [],
+    load: true
   },
-  onChange(e) {
-    console.log('onChange', e)
+  onLoad() {
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
+    let list = [{}];
+    for (let i = 0; i < 12; i++) {
+      list[i] = {};
+      list[i].name = String(i+1+"  月");
+      list[i].id = i;
+    }
     this.setData({
-      current: e.detail.key,
+      list: list,
+      listCur: list[0]
     })
   },
-  onTabsChange(e) {
-    console.log('onTabsChange', e)
-    const { key } = e.detail
-    const index = this.data.tabs.map((n) => n.key).indexOf(key)
-
+  onReady() {
+    wx.hideLoading()
+  },
+  tabSelect(e) {
     this.setData({
-      key,
-      index,
+      TabCur: e.currentTarget.dataset.id,
+      MainCur: e.currentTarget.dataset.id,
+      VerticalNavTop: (e.currentTarget.dataset.id - 1) * 50
     })
   },
-  onSwiperChange(e) {
-    console.log('onSwiperChange', e)
-    const { current: index, source } = e.detail
-    const { key } = this.data.tabs[index]
-
-    if (!!source) {
-      this.setData({
-        key,
-        index,
+  VerticalMain(e) {
+    let that = this;
+    let list = this.data.list;
+    let tabHeight = 0;
+    if (this.data.load) {
+      for (let i = 0; i < list.length; i++) {
+        let view = wx.createSelectorQuery().select("#main-" + list[i].id);
+        view.fields({
+          size: true
+        }, data => {
+          list[i].top = tabHeight;
+          tabHeight = tabHeight + data.height;
+          list[i].bottom = tabHeight;
+        }).exec();
+      }
+      that.setData({
+        load: false,
+        list: list
       })
     }
-  },
+    let scrollTop = e.detail.scrollTop + 20;
+    for (let i = 0; i < list.length; i++) {
+      if (scrollTop > list[i].top && scrollTop < list[i].bottom) {
+        that.setData({
+          VerticalNavTop: (list[i].id - 1) * 50,
+          TabCur: list[i].id
+        })
+        return false
+      }
+    }
+  }
 })

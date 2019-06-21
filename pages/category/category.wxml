@@ -1,48 +1,50 @@
 <!--pages/category/category.wxml-->
-<view class="page">
-    <view class="page__hd">
-        <!-- <view class="page__title">Tabs</view>
-        <view class="page__desc">标签页</view> -->
-    </view>
-    <view class="page__bd">
-        <view class="sub-title">按月分类</view>
-        <wux-tabs defaultCurrent="tab1" direction="vertical">
-            <wux-tab key="tab1" title="一月">
+<!-- 轮播图 -->
+<view class="page-section page-section-spacing swiper">
+ <swiper class="screen-swiper {{DotStyle?'round-dot':'square-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{bnrUrl}}" wx:key>
+      <image src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+</view>
 
-            </wux-tab>
-            <wux-tab key="tab2" title="二月">
 
-            </wux-tab>
-            <wux-tab key="tab3" title="三月">
-            
-            </wux-tab>
-            <wux-tab key="tab4" title="四月">
-            
-            </wux-tab>
-            <wux-tab key="tab5" title="五月">
-            
-            </wux-tab>
-            <wux-tab key="tab6" title="六月">
-            
-            </wux-tab>
-            <wux-tab key="tab7" title="七月">
-            
-            </wux-tab>
-            <wux-tab key="tab8" title="八月">
-            
-            </wux-tab>
-            <wux-tab key="tab9" title="九月">
-            
-            </wux-tab>
-            <wux-tab key="tab10" title="十月">
-            
-            </wux-tab>
-            <wux-tab key="tab11" title="十一月">
-            
-            </wux-tab>
-            <wux-tab key="tab12" title="十二月">
-            
-            </wux-tab>
-        </wux-tabs>
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx)">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
     </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='cuIcon-title text-green'></text> {{item.name}} </view>
+      </view>
+ <view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+  <navigator url='../detail/detail'>
+    <view class="image">
+      <image src="../../images/card1.jpg" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">艺术游学</view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">七天法国艺术游学之旅</text>
+      </view>
+    </view>
+  </navigator>
+  </view>
+  <view class="cu-item shadow">
+  <navigator url='../detail/detail'>
+    <view class="image">
+      <image src="../../images/card1.jpg" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">艺术游学</view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">七天法国艺术游学之旅</text>
+      </view>
+    </view>
+  </navigator>
+  </view>
+  </view>
+  </view>    
+  </scroll-view>
 </view>

@@ -1,25 +1,24 @@
-<!--pages/home/home.wxml-->
+  <!--pages/home/home.wxml-->
 <view class='main'>
   <view class="page-section page-section-spacing swiper">
       <!-- 轮播图 -->
-      <swiper
-        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
-        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-        <block wx:for="{{bnrUrl}}" wx:for-item="item">
-          <swiper-item>
-          <image src="{{item}}"></image>
-          </swiper-item>
-        </block>
-      </swiper>
+       <swiper class="screen-swiper {{DotStyle?'round-dot':'square-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{bnrUrl}}" wx:key>
+      <image src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
     </view>
-    <view class="search">
+
+
+
+    <!-- <view class="search">
       <navigator url="../search/search">
           <view class="search-text">
             <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
               搜 索
             </view>
         </navigator>
-    </view>
+    </view> -->
     <view class="page__bd">
         <!-- <view class="sub-title">Custom content</view> -->
         <!-- 六个主选择框 -->
@@ -52,20 +51,36 @@
             </wux-grid>
         </wux-grids>
     </view>
-    <view class='card'>
-     <view class="page__bd">
-        <wux-wing-blank size="default">
-        <navigator url='../detail/detail'>
-            <wux-card title="七天法国艺术游学之旅" extra="艺术游学">
-                <view slot="body">
-                <image src='../../images/card1.jpg'></image>
-                </view>
-                <view slot="footer">
-                <text>[￥15,000] 九月-八月</text>
-                </view>
-            </wux-card>
-        </navigator>
-        </wux-wing-blank>
+  
+  <view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+  <navigator url='../detail/detail'>
+    <view class="image">
+      <image src="../../images/card1.jpg" mode="widthFix" style='max-height: 170px'></image>
+      <view class="cu-tag bg-blue">艺术游学</view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">七天法国艺术游学之旅</text>
+      </view>
     </view>
+  </navigator>
+  </view>
+
+
+  <view class="cu-item shadow">
+  <navigator url='../detail/detail'>
+    <view class="image">
+      <image src="../../images/card2.jpg" mode="widthFix" style='max-height: 170px'></image>
+      <view class="cu-tag bg-blue">艺术游学</view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">七天法国艺术游学之旅</text>
+      </view>
     </view>
+  </navigator>
+  </view>
+
+
+  </view>
+
+
+
 </view>

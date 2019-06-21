@@ -9,7 +9,7 @@ Page({
     vertical: false,
     autoplay: false,
     circular: false,
-    interval: 100,
+    interval: 5000,
     duration: 500,
     previousMargin: 0,
     nextMargin: 0

@@ -4,7 +4,6 @@
     "pages/index/index",
     "pages/category/category",
     "pages/myprofile/myprofile",
-    "pages/bus/bus",
     "pages/search/search",
     "pages/detail/detail",
     "pages/keydetail/keydetail",
@@ -13,7 +12,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff9933",
-    "navigationBarTitleText": "有方旅行",
+    "navigationBarTitleText": "有方游学",
     "navigationBarTextStyle": "white",
     "navigationStyle": "default"
   },
@@ -29,12 +28,8 @@
         "text": "目录"
       },
       {
-        "pagePath": "pages/bus/bus",
-        "text": "购物车"
-      },
-      {
         "pagePath": "pages/myprofile/myprofile",
-        "text": "用户中心"
+        "text": "关于我们"
       }
     ]
   },

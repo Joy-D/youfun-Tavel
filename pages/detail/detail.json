@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "wux-white-space": "../../dist/white-space/index"
+    "wux-white-space": "../../dist/white-space/index",
+    "wux-card": "../../dist/card/index",
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-fab-button": "../../dist/fab-button/index"
   }
 }

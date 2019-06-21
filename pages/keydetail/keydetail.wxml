@@ -1,16 +1,61 @@
-<!--pages/keydetail/keydetail.wxml-->
-<view class='main'>
-<view class="sub-title">一月</view>
-        <wux-wing-blank size="default">
-        <navigator url='../detail/detail'>
-            <wux-card title="八月印象派艺术之旅" extra="额外内容">
-                <view slot="body">
-                <image src='../../images/card1.jpg'></image>
-                </view>
-                <view slot="footer">
-                <text>[上海之行] 上海旅行，上海学习</text>
-                </view>
-            </wux-card>
-        </navigator>
-  </wux-wing-blank>
+<view class="page__hd">
+        <view class="page__title">艺术游学</view>
+        <view class="page__desc">Travel to learn</view>
+    </view>
+
+
+ <view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+  <navigator url='../detail/detail'>
+    <view class="image">
+      <image src="../../images/card1.jpg" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">艺术游学</view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">七天法国艺术游学之旅</text>
+      </view>
+    </view>
+  </navigator>
   </view>
+  </view>
+
+  <!-- <view class="page">
+    <view class="page__hd">
+        <view class="page__title">Card</view>
+        <view class="page__desc">卡片</view>
+    </view>
+    <view class="page__bd">
+        <view class="sub-title">Default</view>
+        <wux-wing-blank size="default">
+            <wux-card title="卡片标题" extra="额外内容">
+                <view slot="body">卡片内容</view>
+                <view slot="footer">尾部内容</view>
+            </wux-card>
+        </wux-wing-blank>
+        <view class="sub-title">Thumb</view>
+        <wux-wing-blank size="default">
+            <wux-card title="卡片标题" extra="额外内容" thumb="https://wux.cdn.cloverstd.com/logo.png">
+                <view slot="body">卡片内容</view>
+                <view slot="footer">尾部内容</view>
+            </wux-card>
+        </wux-wing-blank>
+        <view class="sub-title">Custom thumb style</view>
+        <wux-wing-blank size="default">
+            <wux-card title="卡片标题" extra="额外内容" thumb="https://wux.cdn.cloverstd.com/logo.png" thumb-style="border-radius: 50%;">
+                <view slot="body">卡片内容</view>
+                <view slot="footer">尾部内容</view>
+            </wux-card>
+        </wux-wing-blank>
+        <view class="sub-title">No border</view>
+        <wux-wing-blank size="default">
+            <wux-card bordered="{{ false }}" title="卡片标题" extra="额外内容" thumb="https://wux.cdn.cloverstd.com/logo.png">
+                <view slot="body">卡片内容</view>
+                <view slot="footer">尾部内容</view>
+            </wux-card>
+        </wux-wing-blank>
+        <view class="sub-title">Full</view>
+        <wux-card full="{{ true }}" title="卡片标题" extra="额外内容" thumb="https://wux.cdn.cloverstd.com/logo.png">
+            <view slot="body">卡片内容</view>
+            <view slot="footer">尾部内容</view>
+        </wux-card>
+    </view>
+</view> -->

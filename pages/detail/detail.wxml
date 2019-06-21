@@ -1,20 +1,63 @@
 <!--pages/detail/detail.wxml-->
-<view>七天法国艺术游学之旅</view>
+
+<!-- 浮动按钮  -->
+<wux-fab-button 
+ position="bottomRight"
+ theme="energized" 
+ direction="vertical"
+ reverse="{{ reverse }}"
+ spaceBetween="{{ spaceBetween }}" 
+ sAngle="{{ sAngle }}" 
+ eAngle="{{ eAngle }}" 
+ buttons="{{ buttons }}" 
+ bind:change="onChange" 
+ bind:click="onClick" 
+ bind:contact="onContact" 
+ bind:getuserinfo="onGotUserInfo" />
+
+
 <view class='main'>
  <view class="page-section page-section-spacing swiper">
       <!-- 轮播图 -->
-      <swiper
-        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
-        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-        <block wx:for="{{bnrUrl}}" wx:for-item="item">
-          <swiper-item>
-          <image src="{{item}}"></image>
-          </swiper-item>
-        </block>
-      </swiper>
-    </view>
+      <swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{bnrUrl}}" wx:key>
+      <image src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+  </swiper>
+  </view>
+
+<!-- 头部简介 -->
+<wux-wing-blank body-style="margin-left: 10px; margin-right: 20px">
+<wux-white-space body-style="height: 10px" />
+  <!-- <view class="padding-sm"> -->
+    <view class="bg-olive padding radius light">
+<text class="text-black text-bold">[七天法国艺术游学之旅]  ￥15,000&巴黎&中小学生&艺术游学</text>
+  </view>
+  <!-- </view> -->
+<!-- <wux-white-space body-style="height: 10px" /> -->
+<!-- 产品包含 -->
+<wux-white-space body-style="height: 10px" />
+ <view class="bg-gradual-green padding radius light">
+            <wux-card title="产品包含" thumb="https://wux.cdn.cloverstd.com/logo.png">
+                <view slot="body">
+                <text>
+                1.交通
+2.酒店：全程准四星酒店
+3.地接：法国当地中文地接，硕士以上学历
+4.餐饮：含酒店每天自助早餐及锅色天香火锅聚餐
+5.服务费
+6.景点：行程所列门票
+                </text>
+                </view>
+            </wux-card>
+ </view>           
+<!--  -->
+</wux-wing-blank>
+<wux-white-space body-style="height: 50px" />
+<!--  -->
 
 
+  <wux-wing-blank size="default">
   <view class="cu-timeline solid{{size?'s':''}}">
   <!-- <view class="cu-time">第一天</view> -->
   <view class="padding bg-white">
@@ -23,7 +66,7 @@
   </view>
   </view>
   
-    <view class="cu-item">
+  <view class="cu-item">
       <view class="content">
         <view class="cu-capsule radius">
           <view class="cu-tag bg-cyan">中国</view>
@@ -241,7 +284,25 @@
         </view>
     </view>
     </view>
-
-    
   </view>
+  </wux-wing-blank>
+
+  <!-- 尾部内容 -->
+  <wux-white-space body-style="height: 30px" />
+<view class="bg-video bg-mask flex align-center" style="height: 422rpx;">
+  <video src="" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"></video>
+  <cover-view class="padding-xl text-white ">
+    <cover-view class="padding-xs  text-xxl text-bold">
+      关于我们
+    </cover-view>
+    <cover-view class="padding-xs">
+      遊必有方, Travel to Learn……
+    </cover-view>
+  </cover-view>
+</view>
+ <view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-blue"></text>邮箱：1102482619@qq.com
+  </view>
+</view>
 </view>

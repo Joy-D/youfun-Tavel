@@ -1,4 +1,6 @@
-.search{
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+/* .search{
     padding: 20rpx;
 }
 .search-text{
@@ -13,4 +15,4 @@
 }
 .search-text icon{
     margin-right: 10rpx;
-}
+} */

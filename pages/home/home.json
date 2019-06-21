@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "有方旅行",
   "usingComponents": {
     "wux-icon": "../../dist/icon/index",
     "wux-grids": "../../dist/grids/index",
