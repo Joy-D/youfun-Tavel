@@ -30,15 +30,15 @@
 <wux-wing-blank body-style="margin-left: 10px; margin-right: 20px">
 <wux-white-space body-style="height: 10px" />
   <!-- <view class="padding-sm"> -->
-    <view class="bg-olive padding radius light">
+    <view class="bg-yellow padding radius">
 <text class="text-black text-bold">[七天法国艺术游学之旅]  ￥15,000&巴黎&中小学生&艺术游学</text>
   </view>
   <!-- </view> -->
 <!-- <wux-white-space body-style="height: 10px" /> -->
 <!-- 产品包含 -->
 <wux-white-space body-style="height: 10px" />
- <view class="bg-gradual-green padding radius light">
-            <wux-card title="产品包含" thumb="https://wux.cdn.cloverstd.com/logo.png">
+ <view class="bg-gradual-green padding radius light shadow-blur">
+            <wux-card title="产品包含" thumb="../../images/logo.png">
                 <view slot="body">
                 <text>
                 1.交通
@@ -73,9 +73,10 @@
           <view class="cu-tag line-cyan">巴黎</view>
         </view>
         <view class="margin-top">乘坐国际航班前往巴黎</view>
+        <image src='../../images/a2.jpg' style='max-height:70px'></image>
     </view>
   </view>
-  
+
 
   <view class="padding bg-white solid{{size?'s':''}}">
   <view class="cu-tag round bg-orange">
@@ -111,7 +112,7 @@
     </view>
 
     
-    <view class="padding bg-white solid{{size?'s':''}}">
+  <view class="padding bg-white solid{{size?'s':''}}">
   <view class="cu-tag round bg-olive">
   第三天 蓬皮杜艺术中心－奥赛博物馆
   </view>
@@ -124,7 +125,7 @@
         </view>
         <view class="margin-top">
         <text>
-        早餐：酒店自助
+早餐：酒店自助
 午餐：双叟咖啡厅（人均20欧元）
 晚餐：锅色天香（火锅聚餐）
         </text>

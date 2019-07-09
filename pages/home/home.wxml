@@ -22,36 +22,15 @@
     <view class="page__bd">
         <!-- <view class="sub-title">Custom content</view> -->
         <!-- 六个主选择框 -->
-        <wux-grids  bordered="{{ false }}">
-            <wux-grid>
-            <navigator url='../keydetail/keydetail'>
-                <wux-icon type="logo-github" />
-                <view>艺术游学</view>
-            </navigator>
-            </wux-grid>
-            <wux-grid>
-                <wux-icon type="logo-github" />
-                <view>酒店管理</view>
-            </wux-grid>
-            <wux-grid>
-                <wux-icon type="logo-github" />
-                <view>马术学校</view>
-            </wux-grid>
-            <wux-grid>
-                <wux-icon type="logo-github" />
-                <view>建筑流派</view>
-            </wux-grid>
-            <wux-grid>
-                <wux-icon type="logo-github" />
-                <view>欧洲画廊</view>
-            </wux-grid>
-            <wux-grid>
-                <wux-icon type="logo-github" />
-                <view>红酒鉴赏</view>
-            </wux-grid>
+        <wux-grids bordered="{{ false }}">
+            <wux-grid thumb="https://wux.cdn.cloverstd.com/logo.png" label="艺术游学" />
+            <wux-grid thumb="https://wux.cdn.cloverstd.com/logo.png" label="酒店管理" />
+            <wux-grid thumb="https://wux.cdn.cloverstd.com/logo.png" label="马术学校" />
+            <wux-grid thumb="https://wux.cdn.cloverstd.com/logo.png" label="建筑流派" />
+            <wux-grid thumb="https://wux.cdn.cloverstd.com/logo.png" label="欧洲画廊" />
+            <wux-grid thumb="https://wux.cdn.cloverstd.com/logo.png" label="红酒鉴赏" />
         </wux-grids>
     </view>
-  
   <view class="cu-card case {{isCard?'no-card':''}}">
   <view class="cu-item shadow">
   <navigator url='../detail/detail'>
